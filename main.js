@@ -2,7 +2,7 @@
 
 var TEXT_LOADING = 'Loading...\n\n历史的行程: %s %';
 var TEXT_SCORE = '+ %s s';
-var TEXT_GAME_OVER = '我为长者续命%s秒\n志己的生命减少%s秒\n而且这个效率efficiency: %s%';
+var TEXT_GAME_OVER = '我为长者续命%s秒\n自己的生命减少%s秒\n而且这个效率efficiency: %s%';
 var TEXT_TRY_AGAIN = '重新续';
 var TEXT_PLAY_BGM = '请州长夫人演唱';
 var TEXT_TIME_ELAPSED = '- %s s';

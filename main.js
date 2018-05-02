@@ -127,6 +127,10 @@ function loadAudio(key, path) {
 }
 
 function preload() {
+  _game.stage.scaleMode = Phaser.StageScaleMode.SHOW_ALL;
+  _game.stage.scale.setScreenSize(true);
+
+
   initLoadingText();
   _game.load.onFileComplete.add(showLoadingText);
 
@@ -602,9 +606,6 @@ function reset() {
 }
 
 function create() {
-  _game.stage.scaleMode = Phaser.StageScaleMode.SHOW_ALL;
-  _game.stage.scale.setScreenSize(true);
-
   initBackground();
   initPipes();
   initFrog();

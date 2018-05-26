@@ -584,7 +584,15 @@ function onKeyUp(e) {
   }
 }
 
+function unlockAudio() {
+  var context = _game.sound.context;
+  if (context && context.state === 'suspended')
+    context.resume();
+}
+
 function initControls() {
+  _game.input.onUp.add(unlockAudio);
+
   _game.input.onDown.add(flap);
   _game.input.keyboard.addCallbacks(_game, onKeyDown, onKeyUp);
 }

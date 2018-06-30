@@ -23,10 +23,29 @@
             #screen {
                 display: inline-block;
             }
+            #footer {
+                position: fixed;
+                bottom: 4px;
+                width: 100%;
+                font-size: small;
+            }
+            #footer a {
+                margin: 0 10px;
+                width: 100px;
+                text-decoration: none;
+            }
+            #footer a, #footer a:visited {
+                color: rgb(192, 68, 17);
+            }
         </style>
     </head>
     <body>
         <div id="screen"></div>
+        <div id="footer">
+            <a href="https://www.mohu.club/" target="_blank">膜乎</a>
+            <a href="https://www.ruhu.ml/" target="_blank">辱乎</a>
+            <a href="https://hahaxixi.github.io/FlappyFrog/" target="_blank">尝试新版</a>
+        </div>
         <script src="phaser.min.js"></script>
         <script src="main.js"></script>
         <script>

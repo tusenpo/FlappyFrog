@@ -127,6 +127,10 @@ function loadAudio(key, path) {
 }
 
 function preload() {
+  _game.stage.scaleMode = Phaser.StageScaleMode.SHOW_ALL;
+  _game.stage.scale.setScreenSize(true);
+
+
   initLoadingText();
   _game.load.onFileComplete.add(showLoadingText);
 
@@ -580,7 +584,15 @@ function onKeyUp(e) {
   }
 }
 
+function unlockAudio() {
+  var context = _game.sound.context;
+  if (context && context.state === 'suspended')
+    context.resume();
+}
+
 function initControls() {
+  _game.input.onUp.add(unlockAudio);
+
   _game.input.onDown.add(flap);
   _game.input.keyboard.addCallbacks(_game, onKeyDown, onKeyUp);
 }
@@ -602,9 +614,6 @@ function reset() {
 }
 
 function create() {
-  _game.stage.scaleMode = Phaser.StageScaleMode.SHOW_ALL;
-  _game.stage.scale.setScreenSize(true);
-
   initBackground();
   initPipes();
   initFrog();
